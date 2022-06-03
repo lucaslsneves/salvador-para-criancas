@@ -11,6 +11,44 @@ body {
     min-height: 100vh;
 }
 
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.modal-wrapper-content {
+    margin-top: 30px;
+    width: 90%;
+    padding: 21px;
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    background-color: #fff;
+    font-family: "Inter", sans-serif;
+    border-radius: 6px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 650px;
+}
+
+.modal-wrapper-content button {
+    max-width: 374px;
+}
+
+.modal-wrapper-content p {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
 #bg {
     position: fixed;
     z-index: 0;

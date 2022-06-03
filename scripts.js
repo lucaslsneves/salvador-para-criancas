@@ -6,6 +6,11 @@
   $(".my-insta-button").click(() => {
     alreadySeenInstagram = true;
   });
+
+  $("#entendi").click(() => {
+    $(".modal").hide();
+  });
+
   function saveAs(uri, filename) {
     var link = document.createElement("a");
 
