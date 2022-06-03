@@ -247,7 +247,7 @@ button:hover {
     height: 100vh;
     width: 100% !important;
     z-index: 10;
-    background-color: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .12);
     overflow: hidden;
     flex-direction: column;
 }
