@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #515151;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+#bg {
+    position: fixed;
+    z-index: 0;
+}
+
+header {
+    padding: 12px 15px;
+    position: fixed;
+}
+
+header img {
+    width: 180px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    max-width: 750px;
+    max-height: 720px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 5;
+    backdrop-filter: blur(6px);
+}
+
+content {
+    opacity: 0.82;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    position: relative;
+}
+
+content.no-opacity {
+    align-items: center;
+    opacity: 0.9;
+}
+
+main.no-opacity {
+    width: auto;
+    height: auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+}
+
+form {
+    z-index: 5;
+    background-color: #fff;
+    width: 100%;
+    height: 370px;
+    position: relative;
+    top: -45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Inter' !important;
+}
+
+.input-wrapper label {
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input {
+    border: 2px solid transparent;
+    padding: 9px;
+    border-radius: 6px;
+    font-size: 17px;
+    outline: 0;
+    transition: 200ms;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+input:focus {
+    border: 2px solid #00B5D8;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+
+
+form p {
+    position: relative;
+    top: -15px;
+    max-width: 390px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+button {
+    background-color: #00B5D8;
+    color: #fff;
+    border: 0;
+    padding: 9px;
+    width: 650px;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 200ms;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: #00A3C4;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    width: 650px;
+}
+
+#error {
+    color: #E53E3E;
+    margin-top: 15px;
+    display: none;
+    max-width: 500px;
+    font-size: 14px;
+}
+
+#carteirinha img {
+    width: 500px;
+}
+
+#carteirinha {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: "Inter";
+}
+
+#carteirinha p {
+    max-width: 300px;
+}
+
+#carteira-pronta {
+    display: flex;
+    align-items: center;
+    margin: 0 auto
+}
+
+
+
+#carteira-pronta {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#print {
+    position: relative;
+}
+
+#wrapper-nome-cpf {
+    position: absolute;
+    bottom: 60px;
+    font-size: 17px;
+    font-weight: 700;
+    left: 70px;
+}
+
+.my-insta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D53F8C;
+    padding: 9px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 375px;
+    width: 270px;
+}
+
+
+#social {
+    position: absolute;
+    bottom: 21px;
+    left: 70px;
+    font-size: 15px;
+}
+
+#nome-cartao {
+    margin-bottom: 9px;
+}
+
+#carteira-pronta.disable {
+    display: none;
+}
+
+#carteira-pronta img {
+    width: 45px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+
+#carteira-pronta p {
+    color: #fff;
+    font-family: 'Inter';
+    max-width: 330px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+
+
+#baixar {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 150px;
+    }
+
+    content {
+        padding: 21px;
+    }
+
+    main {
+        width: 90%;
+        max-height: 830px;
+        min-height: 830px;
+        transform: translateX(-50%) translateY(-33%);
+    }
+
+    button {
+        width: 100%;
+    }
+
+    form p {
+        top: 139px;
+    }
+
+    #error {
+        margin-top: 0;
+        top: -9px;
+        font-size: 12px;
+    }
+
+    #logo {
+        width: 100px;
+    }
+
+    header {
+        padding: 12px 15px;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    main.no-opacity {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 9px;
+    }
+
+    #wrapper-nome-cpf {
+        bottom: 39px;
+        font-size: 13px;
+        font-weight: 700;
+        left: 42px;
+    }
+
+    #social {
+        bottom: 13px;
+        left: 46px;
+        font-size: 12px;
+    }
+}
