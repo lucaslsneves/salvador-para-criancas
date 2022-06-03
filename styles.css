@@ -252,6 +252,15 @@ button:hover {
     flex-direction: column;
 }
 
+#carteira-pronta.row {
+    flex-direction: column;
+    font-size: 21px;
+}
+
+#carteira-pronta.row img {
+    font-size: 84px;
+}
+
 @media (max-width: 900px) {
     .grid {
         width: 100%;

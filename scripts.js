@@ -134,6 +134,15 @@
         $("#baixar").click(() => {
           html2canvas(document.querySelector("#print")).then(function (canvas) {
             saveAs(canvas.toDataURL(), "carteirinha.png");
+            $("body").html(`
+            <img src="/assets/bg-amarelo.png" alt="Background" id="bg">
+            <div class="overlay">
+            <div id="carteira-pronta" class="row">
+                <img style="width: 90px" src="/assets/check.png" />
+                <p>Download efetuado com sucesso!</p>
+            </div>
+            </div>
+            `);
           });
         });
       }
