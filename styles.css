@@ -149,8 +149,6 @@ button:hover {
 }
 
 #carteirinha {
-    padding-top: 15px;
-    padding-bottom: 15px;
     font-family: "Inter";
 }
 
@@ -236,20 +234,42 @@ button:hover {
 
 
 #baixar {
-    display: none;
     width: 100%;
     margin-top: 15px;
+}
+
+.overlay {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100% !important;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .15);
+    overflow: hidden;
+    flex-direction: column;
 }
 
 @media (max-width: 900px) {
     .grid {
         width: 100%;
         grid-template-columns: repeat(1, 1fr);
-        margin-top: 150px;
+        margin-top: 165px;
     }
 
     content {
         padding: 21px;
+    }
+
+    main.no-opacity {
+        height: auto;
+    }
+
+    content.no-opacity {
+        padding: 0px;
+        border-radius: 0;
     }
 
     main {
@@ -264,13 +284,17 @@ button:hover {
     }
 
     form p {
-        top: 139px;
+        top: 165px;
     }
 
     #error {
         margin-top: 0;
         top: -9px;
         font-size: 12px;
+    }
+
+    #print {
+        transform: rotate(90deg);
     }
 
     #logo {
@@ -305,4 +329,33 @@ button:hover {
         left: 46px;
         font-size: 12px;
     }
+
+    #carteira-pronta p {
+        color: #fff;
+        font-family: 'Inter';
+        max-width: 220px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    #carteira-pronta {
+        position: relative;
+        bottom: 99px;
+    }
+
+
+    #baixar {
+        width: 350px;
+        margin-top: 15px;
+        position: relative;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 110px;
+        color: #fff !important;
+    }
+
 }

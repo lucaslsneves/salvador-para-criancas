@@ -25,11 +25,6 @@
       window.open(uri);
     }
   }
-  $("#baixar").click(() => {
-    html2canvas(document.querySelector("#print")).then(function (canvas) {
-      saveAs(canvas.toDataURL(), "carteirinha.png");
-    });
-  });
 
   $("form").submit(function (event) {
     event.preventDefault();
@@ -108,14 +103,40 @@
         $("#error").html(data?.message);
         $("#error").show();
       } else {
-        $("content").addClass("no-opacity");
-        $("main").addClass("no-opacity");
-        $("#carteira-pronta").removeClass("disable");
-        $("#carteirinha").show();
-        $("#baixar").show();
-        $("#form").hide();
-        $("#nome-cartao").html($("#name").val());
-        $("#cpf-cartao").html($("#cpf").val());
+        // $("content").addClass("no-opacity");
+        // $("main").addClass("no-opacity");
+        // $("#carteira-pronta").removeClass("disable");
+        // $("#carteirinha").show();
+        // $("#baixar").show();
+        // $("#form").hide();
+        // $("#nome-cartao").html($("#name").val());
+        // $("#cpf-cartao").html($("#cpf").val());
+        $("body").html(`
+        <img src="/assets/bg-amarelo.png" alt="Background" id="bg">
+        <div class="overlay">
+        <div id="carteira-pronta">
+            <p>Carteirinha gerada com sucesso, clique em baixar para efetuar o download</p>
+            <img style="width: 50px" src="/assets/check.png" />
+        </div>
+            <div id="carteirinha">
+            <div id="print">
+                <img src="/assets/carteirinha.png">
+                <div id="wrapper-nome-cpf">
+                    <p id="nome-cartao"></p>
+                    <p id="cpf-cartao"></p>
+                </div>
+                <p id="social">salvadorparacriancas</p>
+            </div>
+            <button id="baixar">Baixar</button>
+            </div>
+        </div>
+        `);
+
+        $("#baixar").click(() => {
+          html2canvas(document.querySelector("#print")).then(function (canvas) {
+            saveAs(canvas.toDataURL(), "carteirinha.png");
+          });
+        });
       }
     });
   });
