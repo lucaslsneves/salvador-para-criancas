@@ -109,21 +109,20 @@
         // $("#carteirinha").show();
         // $("#baixar").show();
         // $("#form").hide();
-        // $("#nome-cartao").html($("#name").val());
-        // $("#cpf-cartao").html($("#cpf").val());
+
         $("body").html(`
         <img src="/assets/bg-amarelo.png" alt="Background" id="bg">
         <div class="overlay">
         <div id="carteira-pronta">
-            <p>Carteirinha gerada com sucesso, clique em baixar para efetuar o download</p>
+            <p>Carteirinha gerada com sucesso, <span style="color:#D53F8C">clique em baixar para efetuar o download</span></p>
             <img style="width: 50px" src="/assets/check.png" />
         </div>
             <div id="carteirinha">
             <div id="print">
                 <img src="/assets/carteirinha.png">
                 <div id="wrapper-nome-cpf">
-                    <p id="nome-cartao"></p>
-                    <p id="cpf-cartao"></p>
+                    <p id="nome-cartao">${$("#name").val()}</p>
+                    <p id="cpf-cartao">${$("#cpf").val()}</p>
                 </div>
                 <p id="social">salvadorparacriancas</p>
             </div>

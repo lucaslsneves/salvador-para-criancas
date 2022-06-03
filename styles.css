@@ -318,15 +318,15 @@ button:hover {
     }
 
     #wrapper-nome-cpf {
-        bottom: 39px;
+        bottom: 64px;
         font-size: 13px;
         font-weight: 700;
-        left: 42px;
+        left: 60px;
     }
 
     #social {
-        bottom: 13px;
-        left: 46px;
+        bottom: 24px;
+        left: 70px;
         font-size: 12px;
     }
 
